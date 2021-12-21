@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+/* margin dan padding bernilai 0 karena untuk layout yang ditampilkan akan memenuhi seluruh lebar dan tinggi dari jendela browser.  */
+body {
+   font-family: 'Quicksand', sans-serif;
+   margin: 0;
+   padding: 20px;
+}
+
+/* memberikan efek tebal pada teks ketika salah satu item navigasi diarahkan menggunakan kursor. */
+nav a:hover {
+   font-weight: bold;
+}
+
+.profile header {
+   text-align: center;
+}   
+
+.jumbotron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    color: white;
+ }
+
+.card {
+    /* text-align: center; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+ }
+
+ .tombol {
+    background: #3498db;
+    color: #fff;
+    border: 0;
+    padding: 5px 8px;
+  }
+
+label {
+    text-align: center;
+}
+header {
+    display: inline;
+ }

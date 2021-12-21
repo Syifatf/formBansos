@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <body>
+            <header>
+                <div class="jumbotron">
+                    <h1>Kementrian Sosial (Kemensos) Republik Indonesia</h1>
+                    <p>Era Pandemi Covid-19 harus segera memberikan bantuan kepada masyarakat Indonesia yang terdampak oleh pandemi Covid-19</p>
+                </div>
+         </header>
+
+         <main>
+             <div class="card">
+             <div>
+                 <form class="formData" action="#" method="POST" onSubmit="validasi()">
+                    <!-- nama -->
+                    <div>
+                        <label>Nama Lengkap:</label>
+                        <input type="text" name="nama" id="nama" />
+                    </div>
+
+                    <!--  nik -->
+                    <div>
+                        <label>NIK:</label>
+                        <input type="number" name="nik" id="nik" />
+                    </div>
+
+                    <!-- No kartu keluarga -->
+                    <div>
+                        <label>No Kartu keluarga:</label>
+                        <input type="number" name="nokk" id="nokk" />
+                    </div>
+
+                    <!-- Foto KTP -->
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Foto KTP</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+
+                    <!--  Foto KK -->
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Foto Kartu Keluarga</label>
+                        <input type="file" class="form-control-file2" id="exampleFormControlFile2">
+                    </div>
+
+                    <!-- umur -->
+                    <div>
+                        <label>Umur:</label>
+                        <input type="number" name="umur" id="umur" />
+                    </div>
+
+                    <!--  JK -->
+                    <div>
+                        <label>Jenis Kelamin:</label>
+                        <input type="text" name="jk" id="jk" />
+                    </div>
+
+                    <!-- propinsi -->
+                    <div>
+                        <label>Propinsi:</label>
+                        <input type="text" name="propinsi" id="propinsi" />
+                    </div>
+
+                    <!-- Kab/Kota -->
+                    <div>
+                        <label>Kab/Kota:</label>
+                        <input type="text" name="kabKota" id="kabKota" />
+                    </div>
+
+                    <!-- Kecamatan -->
+                    <div>
+                        <label>Kecamatan:</label>
+                        <input type="text" name="kecamatan" id="kecamatan" />
+                    </div>
+
+                    <!-- Kelurahan -->
+                    <div>
+                        <label>Kelurahan/Desa:</label>
+                        <input type="text" name="kelurahan" id="kelurahan" />
+                    </div>
+
+                    <!-- Alamat -->
+                    <div>
+                        <label>Alamat:</label>
+                        <textarea cols="40" rows="5" name="alamat" id="alamat"></textarea>
+                    </div>
+
+                    <!-- RT -->
+                    <div>
+                        <label>RT:</label>
+                        <input type="number" name="rt" id="rt" />
+                    </div>
+
+                    <!--  RW -->
+                    <div>
+                        <label>RW:</label>
+                        <input type="number" name="rw" id="rw" />
+                    </div>
+
+                    <!-- Penghasilan Sebelum -->
+                    <div>
+                        <label>Penghasilan Sebelum Pandemi:</label>
+                        <input type="penghasilan1" name="penghasilan1" id="penghasilan1" />
+                    </div>
+
+                    <!-- Penghasilan setelah -->
+                    <div>
+                        <label>Penghasilan Setelah Pandemi:</label>
+                        <input type="text" name="penghasilan" id="penghasilan" />
+                    </div>
+
+                    <!-- Alasan -->
+                    <div>
+                        <label>Alasan membutuhkan bantuan:</label>
+                        <input type="text" name="alasan" id="alasan" />
+                    </div>
+
+                    <!-- pernyataan -->
+                    <div>
+                        <label>
+                            <input type="checkbox" name="pernyataan" id="pernyataan"> Saya menyatakan bahwa data yang diisikan adalah benar dan siap mempertanggungjawabkan apabila ditemukan ketidaksesuaian dalam data tersebut.
+                        </label>
+                    </div>
+
+                    <!-- Submit -->
+                    <div>
+                        <input type="submit" value="Daftar" class="tombol">
+                    </div>
+                 </form>
+                </div>
+             </div>
+         </main>
+        </body>
+
+        <script type="text/javascript">
+            function validasi() {
+                var Nama = document.getElementById("nama").value;
+                var NIK = document.getElementById("nik").value;
+                var NomorKartuKeluarga = document.getElementById("nokk").value;
+                var FotoKTP = document.getElementById("exampleFormControlFile1").value;
+                var FotoKartuKeluarga = document.getElementById("exampleFormControlFile2").value;
+                var Umur = document.getElementById("umur").value;
+                var JK = document.getElementById("jk").value;
+                var Provinsi = document.getElementById("propinsi").value;
+                var KabKota = document.getElementById("kabKota").value;
+                var Kecamatan = document.getElementById("kecamatan").value;
+                var KelurahanDesa = document.getElementById("kelurahan").value;
+                var PenghasilanSebelumPandemi = document.getElementById("penghasilan1").value;
+                var PenghasilanSetelahPandemi = document.getElementById("penghasilan2").value;
+                var AlasanMembutuhkanBantuan = document.getElementById("alasan").value;
+                var Pernyataan = document.getElementById("pernyataan").value;
+                if (
+                    nama != "" && NIK!="" && NomorKartuKeluarga !="" && FotoKTP!="" && FotoKartuKeluarga !="" && Umur !="" && JK !="" && 
+                    Provinsi !="" && KabKota !="" && Kecamatan !="" && KelurahanDesa !="" && PenghasilanSebelumPandemi !="" && PenghasilanSetelahPandemi !="" && 
+                    AlasanMembutuhkanBantuan !="" && Pernyataan !="") {
+                    return true;
+                }else{
+                    alert('Harap Mengisi Semua Data  !');
+                }
+            }
+        </script>
+    </head>
+</html>
